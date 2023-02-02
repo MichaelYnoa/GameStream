@@ -41,14 +41,14 @@ struct InicioYRegistroView: View {
                 Button("INICIA SESION") {
                     tipoInicioSesion = true
                     print("Pantalla Inicio Sesion")
-                }.foregroundColor(tipoInicioSesion ? .white : .gray)
+                }.foregroundColor(tipoInicioSesion ? .white : .gray).bold()
                 
                 Spacer()
                 
                 Button("REGÍSTRATE") {
                     tipoInicioSesion = false
                     print("Pantalla de Registro")
-                }.foregroundColor(tipoInicioSesion ? .gray : .white)
+                }.foregroundColor(tipoInicioSesion ? .gray : .white).bold()
                 
                 Spacer()
                 
@@ -69,11 +69,52 @@ struct InicioYRegistroView: View {
 }
 
 struct InicioSesionView:View {
+    
+    @State var correo = ""
+    @State var contraseña = ""
+    
     var body: some View{
         
-        VStack{
-            Text("Vista de inicio de sesion")
-        }.foregroundColor(.white)
+        ScrollView {
+            
+            
+            VStack (alignment: .leading) {
+                
+                
+                Text("Correo Electrónico").foregroundColor(Color("Dark-cian"))
+                
+                ZStack(alignment: .leading) {
+                    
+                    if correo.isEmpty{
+                        Text("ejemplo @ gmail.com").font(.caption).foregroundColor(.gray)
+                    }
+                    TextField("", text: $correo)
+                    
+                }
+                
+                Divider().frame(width: 300, height: 1).background(Color("Dark-cian")).padding(.bottom)
+                
+                
+                
+                
+                ZStack(alignment: .leading) {
+                    
+                    if contraseña.isEmpty{
+                        Text("**********").font(.caption).foregroundColor(.gray)
+                    }
+                    SecureField("", text: $contraseña)
+                    
+                }
+                
+                Divider().frame(width: 300, height: 1).background(Color("Dark-cian")).padding(.bottom)
+                
+                
+            }.padding(.horizontal, 77)
+            
+            
+            
+            
+        }
         
         
     }
