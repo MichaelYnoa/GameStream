@@ -140,9 +140,9 @@ struct InicioSesionView:View {
                         print("Iniciar Sesion con Facebook")
                     } label: {
                         Text("Facebook").foregroundColor(.white).bold()
-                            .padding(EdgeInsets(top: 11, leading: 11, bottom: 11, trailing: 11))
-                            .overlay(RoundedRectangle(cornerRadius: 6)
-                            .stroke(Color("Dark-cian"), lineWidth: 1))
+                            .padding(EdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20))
+                            .background(Color(.white).opacity(0.3)).cornerRadius(6)
+                            
                     }
                     
                     Divider()
@@ -151,9 +151,12 @@ struct InicioSesionView:View {
                         print("Iniciar Sesion con Twitter")
                     } label: {
                         Text("Twitter").foregroundColor(.white).bold()
-                            .padding(EdgeInsets(top: 11, leading: 18, bottom: 11, trailing: 18))
-                            .overlay(RoundedRectangle(cornerRadius: 6)
-                            .stroke(Color("Dark-cian"), lineWidth: 1))
+                            .padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+                            .background(Color(.white).opacity(0.3)).cornerRadius(6)
+                            
+                            
+                            
+                            
                     } //35,49,80
                     
                 }.frame(maxWidth: .infinity)
