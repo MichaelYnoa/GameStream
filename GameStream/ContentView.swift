@@ -10,18 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        ZStack {
-            
-            Spacer()
-            
-            Color(red: 19/255, green: 30/255, blue: 53/255).ignoresSafeArea()
-            
-            VStack{
-                Image("appLogo").resizable().aspectRatio(contentMode: .fit).frame(width: 250).padding(.bottom, 60)
+        NavigationView {
+            ZStack {
                 
-                InicioYRegistroView()
-            }
-            
+                Spacer()
+                
+                Color(red: 19/255, green: 30/255, blue: 53/255).ignoresSafeArea()
+                
+                VStack{
+                    Image("appLogo").resizable().aspectRatio(contentMode: .fit).frame(width: 250).padding(.bottom, 60)
+                    
+                    InicioYRegistroView()
+                }
+                
+            }.navigationBarHidden(true)
         }
         
     }
@@ -29,7 +31,7 @@ struct ContentView: View {
 
 struct InicioYRegistroView: View {
     
-    @State var tipoInicioSesion = false
+    @State var tipoInicioSesion = true
     
     var body: some View{
         
@@ -72,13 +74,14 @@ struct InicioSesionView:View {
     
     @State var correo = ""
     @State var contraseña = ""
+    @State var isPantallaHomeActive = false
     
     var body: some View{
         
         ScrollView {
             
             
-            VStack (alignment: .leading) {
+            VStack{
                 
                 
                 Text("Correo Electrónico").foregroundColor(Color("Dark-cian")).fontWeight(.bold)
@@ -164,17 +167,25 @@ struct InicioSesionView:View {
             }.padding(.horizontal, 77)
             
             
+            //NavigationLink(destination: Home(), isActive: $isPantallaHomeActive, label: EmptyView())
             
+            NavigationLink(destination: Home(), isActive: $isPantallaHomeActive, label: { EmptyView() })
             
         }
         
         
     }
+    
+    
+    func iniciarSesion() {
+        print("estoy iniciando sesion")
+        
+        isPantallaHomeActive = true
+    }
+    
 }
 
-func iniciarSesion() {
-    print("estoy iniciando sesion")
-}
+
 
 struct RegistroView:View {
     
