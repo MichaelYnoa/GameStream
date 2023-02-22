@@ -43,14 +43,14 @@ struct InicioYRegistroView: View {
                 Button("INICIA SESION") {
                     tipoInicioSesion = true
                     print("Pantalla Inicio Sesion")
-                }.foregroundColor(tipoInicioSesion ? .white : .gray).bold()
+                }.foregroundColor(tipoInicioSesion ? .white : .gray) // aqui hay un bolt
                 
                 Spacer()
                 
                 Button("REGÍSTRATE") {
                     tipoInicioSesion = false
                     print("Pantalla de Registro")
-                }.foregroundColor(tipoInicioSesion ? .gray : .white).bold()
+                }.foregroundColor(tipoInicioSesion ? .gray : .white) // aqui hay un bolt
                 
                 Spacer()
                 
