@@ -15,3 +15,6 @@ struct GameStreamApp: App {
         }
     }
 }
+
+
+// link para el api = https://gamestreamapi.herokuapp.com/ 
