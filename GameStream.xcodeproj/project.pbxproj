@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		69302F36298F2E1200E48CF0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69302F35298F2E1200E48CF0 /* Home.swift */; };
+		6960866629B177CE00D5811C /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6960866529B177CE00D5811C /* GamesView.swift */; };
+		6960866B29B17D6300D5811C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6960866A29B17D6300D5811C /* Model.swift */; };
+		6960866D29B17D8100D5811C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6960866C29B17D8100D5811C /* ViewModel.swift */; };
 		6991D3CB298B5AF10026327B /* GameStreamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6991D3CA298B5AF10026327B /* GameStreamApp.swift */; };
 		6991D3CD298B5AF10026327B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6991D3CC298B5AF10026327B /* ContentView.swift */; };
 		6991D3CF298B5AF20026327B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6991D3CE298B5AF20026327B /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 
 /* Begin PBXFileReference section */
 		69302F35298F2E1200E48CF0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		6960866529B177CE00D5811C /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		6960866A29B17D6300D5811C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6960866C29B17D8100D5811C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6991D3C7298B5AF10026327B /* GameStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6991D3CA298B5AF10026327B /* GameStreamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStreamApp.swift; sourceTree = "<group>"; };
 		6991D3CC298B5AF10026327B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +40,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6960866729B17C7500D5811C /* Vistas */ = {
+			isa = PBXGroup;
+			children = (
+				6991D3CC298B5AF10026327B /* ContentView.swift */,
+				69302F35298F2E1200E48CF0 /* Home.swift */,
+				6960866529B177CE00D5811C /* GamesView.swift */,
+			);
+			path = Vistas;
+			sourceTree = "<group>";
+		};
+		6960866829B17CEA00D5811C /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				6960866A29B17D6300D5811C /* Model.swift */,
+			);
+			path = Modelos;
+			sourceTree = "<group>";
+		};
+		6960866929B17D0200D5811C /* VistasModelos */ = {
+			isa = PBXGroup;
+			children = (
+				6960866C29B17D8100D5811C /* ViewModel.swift */,
+			);
+			path = VistasModelos;
+			sourceTree = "<group>";
+		};
 		6991D3BE298B5AF10026327B = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +85,10 @@
 		6991D3C9298B5AF10026327B /* GameStream */ = {
 			isa = PBXGroup;
 			children = (
+				6960866929B17D0200D5811C /* VistasModelos */,
+				6960866829B17CEA00D5811C /* Modelos */,
+				6960866729B17C7500D5811C /* Vistas */,
 				6991D3CA298B5AF10026327B /* GameStreamApp.swift */,
-				6991D3CC298B5AF10026327B /* ContentView.swift */,
-				69302F35298F2E1200E48CF0 /* Home.swift */,
 				6991D3CE298B5AF20026327B /* Assets.xcassets */,
 				6991D3D0298B5AF20026327B /* Preview Content */,
 			);
@@ -140,8 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6960866B29B17D6300D5811C /* Model.swift in Sources */,
 				6991D3CD298B5AF10026327B /* ContentView.swift in Sources */,
 				69302F36298F2E1200E48CF0 /* Home.swift in Sources */,
+				6960866629B177CE00D5811C /* GamesView.swift in Sources */,
+				6960866D29B17D8100D5811C /* ViewModel.swift in Sources */,
 				6991D3CB298B5AF10026327B /* GameStreamApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
